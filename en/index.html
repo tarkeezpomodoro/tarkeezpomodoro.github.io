@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html data-root="../" dir="ltr" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pomodoro Timer for Studying – Free Online Focus Timer | Tarkeez Pomodoro</title>
+  <meta name="description" content="Tarkeez Pomodoro is a free online Pomodoro timer for studying and work, with a task list and focus stats. No sign-up, works on phone and desktop.">
+  <link rel="canonical" href="https://tarkeezpomodoro.github.io/en/">
+  <link rel="alternate" hreflang="ar" href="https://tarkeezpomodoro.github.io/ar/">
+  <link rel="alternate" hreflang="en" href="https://tarkeezpomodoro.github.io/en/">
+  <link rel="alternate" hreflang="tr" href="https://tarkeezpomodoro.github.io/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://tarkeezpomodoro.github.io/">
+  <meta name="theme-color" content="#ba4949">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta property="og:site_name" content="Tarkeez Pomodoro">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pomodoro Timer for Studying – Free Online Focus Timer | Tarkeez Pomodoro">
+  <meta property="og:description" content="Tarkeez Pomodoro is a free online Pomodoro timer for studying and work, with a task list and focus stats. No sign-up, works on phone and desktop.">
+  <meta property="og:url" content="https://tarkeezpomodoro.github.io/en/">
+  <meta property="og:image" content="https://tarkeezpomodoro.github.io/img/og-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarkeez Pomodoro — free Pomodoro timer for studying">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AR">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=84db775a">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tarkeez Pomodoro", "alternateName": ["Tarkeez Pomodoro", "تركيز بومودورو", "Tarkeez", "تركيز"], "url": "https://tarkeezpomodoro.github.io/en/", "description": "Tarkeez Pomodoro is a free online Pomodoro timer for studying and work, with a task list and focus stats. No sign-up, works on phone and desktop.", "applicationCategory": "ProductivityApplication", "operatingSystem": "Any", "inLanguage": "en", "isAccessibleForFree": true, "image": "https://tarkeezpomodoro.github.io/img/og-en.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Are my tasks and data saved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — only in your browser (local storage). Nothing is sent to a server. Clearing your browser data removes it."}}, {"@type": "Question", "name": "Does the timer keep running if I switch tabs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The timer stays accurate in the background and shows the remaining time in the tab title. Turn on notifications in Settings to get alerts."}}, {"@type": "Question", "name": "Is it free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — completely free, and no sign-up needed."}}]}</script>
+</head>
+<body data-mode="pomodoro">
+<a class="skip-link" data-i18n="skip" href="#timer">Skip to timer</a>
+<div aria-hidden="true" class="progress-top"><div class="progress-top__bar" id="topBar"></div></div>
+<header class="topbar">
+<div class="container topbar__inner">
+<a class="brand" href="./">
+<img alt="" height="28" src="../favicon.svg" width="28"/>
+<span data-i18n="brand">Tarkeez Pomodoro</span>
+</a>
+<nav class="topbar__actions">
+<button aria-haspopup="dialog" class="btn-ghost" id="statsBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>
+<span data-i18n="report">Report</span>
+</button>
+<button aria-haspopup="dialog" class="btn-ghost" id="settingsBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>
+<span data-i18n="settings">Settings</span>
+</button>
+        <div class="lang-menu">
+          <button class="btn-ghost lang-menu__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="lang-menu__cur">English</span></button>
+          <ul class="menu lang-menu__list" hidden>
+          <li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li>
+          <li><a href="../en/" hreflang="en" lang="en" data-lang="en" aria-current="true">English</a></li>
+          <li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          </ul>
+        </div>
+      </nav>
+</div>
+</header>
+<main class="container main">
+<!-- TIMER -->
+<section aria-labelledby="timerHeading" class="timer-card" id="timer">
+<h1 class="tagline" data-i18n="h1" id="timerHeading">Free Pomodoro timer for studying and work</h1>
+<div aria-label="Timer mode" class="modes" role="tablist">
+<button class="mode-btn" data-i18n="mode_pomodoro" data-mode="pomodoro" role="tab" type="button">Pomodoro</button>
+<button class="mode-btn" data-i18n="mode_short" data-mode="short" role="tab" type="button">Short Break</button>
+<button class="mode-btn" data-i18n="mode_long" data-mode="long" role="tab" type="button">Long Break</button>
+</div>
+<div aria-live="off" class="time" dir="ltr" id="time" role="timer">25:00</div>
+<div class="controls">
+<button class="btn-start" data-i18n="start" id="startBtn" type="button">START</button>
+<button aria-label="Skip session" class="btn-icon" data-i18n-aria="skip_session" hidden="" id="skipBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 4l10 8-10 8V4zM19 5v14"></path></svg>
+</button>
+<button aria-label="Reset" class="btn-icon" data-i18n-aria="reset" id="resetBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"></path></svg>
+</button>
+</div>
+<p class="kbd-hint" data-i18n="kbd_hint">Press Space to start or pause</p>
+</section>
+<div class="session-info">
+<div class="session-count" id="sessionCount">#1</div>
+<div class="session-msg" id="sessionMsg">حان وقت التركيز!</div>
+</div>
+<!-- TASKS -->
+<section aria-labelledby="tasksHeading" class="tasks">
+<div class="tasks__head">
+<h2 data-i18n="tasks" id="tasksHeading">Tasks</h2>
+<div class="menu-wrap">
+<button aria-expanded="false" aria-haspopup="menu" aria-label="Task options" class="btn-icon btn-icon--sm" data-i18n-aria="task_options" id="tasksMenuBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg>
+</button>
+<div class="menu" hidden="" id="tasksMenu" role="menu">
+<button data-action="clear-done" data-i18n="clear_done" role="menuitem" type="button">Clear finished tasks</button>
+<button data-action="clear-pomos" data-i18n="clear_pomos" role="menuitem" type="button">Reset pomodoro counts</button>
+<button data-action="clear-all" data-i18n="clear_all" role="menuitem" type="button">Clear all tasks</button>
+</div>
+</div>
+</div>
+<div class="current-task" hidden="" id="currentTask">
+<span data-i18n="working_on">Working on:</span> <strong id="currentTaskName"></strong>
+</div>
+<ul class="task-list" id="taskList"></ul>
+<button class="add-task" id="addTaskBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+<span data-i18n="add_task">Add Task</span>
+</button>
+<form autocomplete="off" class="task-form" hidden="" id="taskForm">
+<input data-i18n-ph="task_ph" id="taskTitle" maxlength="120" placeholder="What are you working on?" required="" type="text"/>
+<label class="task-form__label" data-i18n="est_pomos" for="taskEst">Est. Pomodoros</label>
+<div class="stepper">
+<input id="taskEst" inputmode="numeric" max="99" min="1" type="number" value="1"/>
+<button aria-label="+1" class="stepper__btn" data-step="1" type="button">▲</button>
+<button aria-label="-1" class="stepper__btn" data-step="-1" type="button">▼</button>
+</div>
+<textarea data-i18n-ph="note_ph" id="taskNote" maxlength="500" placeholder="Note (optional)" rows="2"></textarea>
+<div class="task-form__actions">
+<button class="btn-text btn-danger" data-i18n="delete" hidden="" id="taskDeleteBtn" type="button">Delete</button>
+<span class="spacer"></span>
+<button class="btn-text" data-i18n="cancel" id="taskCancelBtn" type="button">Cancel</button>
+<button class="btn-dark" data-i18n="save" type="submit">Save</button>
+</div>
+</form>
+<div class="summary" hidden="" id="summary">
+<span><span data-i18n="pomos">Pomos</span>: <b id="sumPomos">0/0</b></span>
+<span><span data-i18n="finish_at">Finish at</span>: <b dir="ltr" id="sumFinish">--:--</b> <small id="sumHours"></small></span>
+</div>
+</section>
+<!-- ABOUT / GUIDE -->
+<article class="guide" id="guide">
+<section>
+<h2 data-i18n="g_what_t">What is the Pomodoro Technique?</h2>
+<p data-i18n="g_what_p">The Pomodoro Technique is a simple time-management method created by Francesco Cirillo in the late 1980s. You split your work into short focus intervals (usually 25 minutes) separated by short breaks. Each interval is called a "pomodoro" — Italian for "tomato" — after the tomato-shaped kitchen timer Cirillo used as a student.</p>
+</section>
+<section>
+<h2 data-i18n="g_how_t">How to use it (5 steps)</h2>
+<ol class="steps">
+<li data-i18n="g_how_1"><b>Pick one task</b></li>
+<li data-i18n="g_how_2"><b>Set the timer to 25 minutes</b></li>
+<li data-i18n="g_how_3"><b>Work only on that task</b></li>
+<li data-i18n="g_how_4"><b>Take a short 5-minute break</b></li>
+<li data-i18n="g_how_5"><b>After 4 rounds</b></li>
+</ol>
+</section>
+<section>
+<h2 data-i18n="g_why_t">Why it helps people who struggle to focus</h2>
+<ul class="cards">
+<li><h3 data-i18n="g_why_1t">Starting feels easy</h3><p data-i18n="g_why_1p">Just 25 minutes is far less daunting than "hours of work", so procrastination drops.</p></li>
+<li><h3 data-i18n="g_why_2t">It fights distraction</h3><p data-i18n="g_why_2p">A clear end point helps your brain postpone distractions instead of giving in to them.</p></li>
+<li><h3 data-i18n="g_why_3t">It prevents burnout</h3><p data-i18n="g_why_3p">Regular breaks refresh mental energy and keep your focus sharp all day.</p></li>
+<li><h3 data-i18n="g_why_4t">It shows your progress</h3><p data-i18n="g_why_4p">Counting completed pomodoros gives you a sense of achievement and keeps you going.</p></li>
+</ul>
+</section>
+<section>
+<h2 data-i18n="g_tips_t">Tips for better results</h2>
+<ul class="tips">
+<li data-i18n="g_tip_1">Silence phone notifications — or leave the phone in another room — during a focus round.</li>
+<li data-i18n="g_tip_2">Break big tasks into small ones that take 1–4 rounds each.</li>
+<li data-i18n="g_tip_3">If 25 minutes feels too long, start with 15 in Settings and build up gradually.</li>
+<li data-i18n="g_tip_4">Don't scroll your phone on breaks; move or breathe deeply so your mind actually rests.</li>
+<li data-i18n="g_tip_5">If you're interrupted, finish the round later or restart it — a pomodoro is indivisible.</li>
+</ul>
+</section>
+<section>
+<h2 data-i18n="g_faq_t">FAQ</h2>
+<details><summary data-i18n="faq1_q">Are my tasks and data saved?</summary><p data-i18n="faq1_a">Yes — only in your browser (local storage). Nothing is sent to a server. Clearing your browser data removes it.</p></details>
+<details><summary data-i18n="faq2_q">Does the timer keep running if I switch tabs?</summary><p data-i18n="faq2_a">Yes. The timer stays accurate in the background and shows the remaining time in the tab title. Turn on notifications in Settings to get alerts.</p></details>
+<details><summary data-i18n="faq3_q">Is it free?</summary><p data-i18n="faq3_a">Yes — completely free, and no sign-up needed.</p></details>
+</section>
+      <section class="guides"><h2>Helpful guides</h2><ul class="cards cards--links"><li class="card"><a href="../en/articles/pomodoro-for-studying/"><h3>The Pomodoro Technique for Studying: A Practical Student Guide</h3><p>How to study with better focus using the Pomodoro Technique — step-by-step instructions, a sample study session schedule, and common mistakes students make.</p><span class="card__more">Read article →</span></a></li><li class="card"><a href="../en/articles/beat-distraction/"><h3>How to Beat Distraction and Poor Focus with the Pomodoro Technique</h3><p>Does your attention drift fast? Learn how the Pomodoro Technique helps you resist distractions and start the tasks you keep putting off, with five practical strategies.</p><span class="card__more">Read article →</span></a></li></ul></section>
+    </article>
+</main>
+
+  <footer class="footer">
+    <div class="container container--wide">
+      <nav class="footer__nav" aria-label="Articles"><a href="../en/"><b>Timer</b></a> <a href="../en/articles/"><b>Articles</b></a> <a href="../en/articles/pomodoro-for-studying/">The Pomodoro Technique for Studying: A Practical Student Guide</a> <a href="../en/articles/beat-distraction/">How to Beat Distraction and Poor Focus with the Pomodoro Technique</a></nav>
+      <nav class="footer__langs" aria-label="Language"><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a> <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a> <a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></nav>
+      <nav class="footer__pages"><a href="../en/about/">About</a> <a href="../en/privacy/">Privacy Policy</a></nav>
+      <p>Made with care to help you focus</p>
+      <p class="footer__rights">© 2026 Muhammed FEHİMOĞLU · All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- SETTINGS DIALOG -->
+<dialog aria-labelledby="settingsTitle" class="modal" id="settingsDlg">
+<form class="modal__inner" id="settingsForm" method="dialog">
+<div class="modal__head">
+<h2 data-i18n="settings" id="settingsTitle">Settings</h2>
+<button aria-label="Close" class="btn-icon btn-icon--sm btn-close" data-i18n-aria="close" value="cancel">✕</button>
+</div>
+<fieldset class="field-group">
+<legend data-i18n="time_minutes">Time (minutes)</legend>
+<div class="grid3">
+<label><span data-i18n="mode_pomodoro">Pomodoro</span><input id="setPomo" max="180" min="1" type="number"/></label>
+<label><span data-i18n="mode_short">Short Break</span><input id="setShort" max="60" min="1" type="number"/></label>
+<label><span data-i18n="mode_long">Long Break</span><input id="setLong" max="120" min="1" type="number"/></label>
+</div>
+</fieldset>
+<div class="row"><label data-i18n="auto_breaks" for="setAutoBreak">Auto start breaks</label><input class="switch" id="setAutoBreak" type="checkbox"/></div>
+<div class="row"><label data-i18n="auto_pomos" for="setAutoPomo">Auto start pomodoros</label><input class="switch" id="setAutoPomo" type="checkbox"/></div>
+<div class="row"><label data-i18n="long_interval" for="setInterval">Long break interval (rounds)</label><input class="num-sm" id="setInterval" max="12" min="1" type="number"/></div>
+<div class="row"><label data-i18n="alarm_sound" for="setSound">Alarm sound</label>
+<select id="setSound">
+<option data-i18n="snd_bell" value="bell">Bell</option>
+<option data-i18n="snd_digital" value="digital">Digital</option>
+<option data-i18n="snd_soft" value="soft">Soft</option>
+<option data-i18n="snd_none" value="none">None</option>
+</select>
+</div>
+<div class="row"><label data-i18n="volume" for="setVolume">Volume</label><input id="setVolume" max="100" min="0" type="range"/></div>
+<div class="row"><label data-i18n="ambient" for="setAmbient">Background sound while focusing</label>
+<select id="setAmbient"><option data-i18n="amb_none" value="none">None</option><option data-i18n="amb_rain" value="rain">Rain</option><option data-i18n="amb_white" value="white">White noise</option><option data-i18n="amb_brown" value="brown">Brown noise (deeper)</option></select>
+</div>
+<div class="row"><label data-i18n="ambient_vol" for="setAmbientVol">Background volume</label><input id="setAmbientVol" max="100" min="0" type="range"/></div>
+<div class="row"><label data-i18n="tick" for="setTick">Ticking sound while focusing</label><input class="switch" id="setTick" type="checkbox"/></div>
+<div class="row"><label data-i18n="notify" for="setNotify">Browser notifications</label><input class="switch" id="setNotify" type="checkbox"/></div>
+<div class="row"><label data-i18n="dark_run" for="setDark">Dark mode while running</label><input class="switch" id="setDark" type="checkbox"/></div>
+<div class="modal__foot">
+<button class="btn-text" data-i18n="test_sound" id="testSoundBtn" type="button">Test sound</button>
+<span class="spacer"></span>
+<button class="btn-dark" data-i18n="ok" id="saveSettingsBtn" type="button">Save</button>
+</div>
+</form>
+</dialog>
+<!-- STATS DIALOG -->
+<dialog aria-labelledby="statsTitle" class="modal" id="statsDlg">
+<form class="modal__inner" method="dialog">
+<div class="modal__head">
+<h2 data-i18n="report" id="statsTitle">Report</h2>
+<button aria-label="Close" class="btn-icon btn-icon--sm btn-close" data-i18n-aria="close" value="cancel">✕</button>
+</div>
+<div class="stat-cards">
+<div class="stat"><b id="stToday">0</b><span data-i18n="st_today">Pomodoros today</span></div>
+<div class="stat"><b id="stMinutes">0</b><span data-i18n="st_minutes">Focus minutes today</span></div>
+<div class="stat"><b id="stStreak">0</b><span data-i18n="st_streak">Day streak</span></div>
+</div>
+<h3 class="chart-title" data-i18n="st_week">Last 7 days (focus minutes)</h3>
+<div class="chart" id="weekChart" role="img"></div>
+<div class="modal__foot">
+<button class="btn-text btn-danger" data-i18n="reset_stats" id="resetStatsBtn" type="button">Clear stats</button>
+<span class="spacer"></span>
+<button class="btn-dark" data-i18n="close" value="cancel">Close</button>
+</div>
+</form>
+</dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="../i18n.js?v=84db775a"></script>
+<script src="../site.js?v=84db775a"></script>
+<script src="../app.js?v=84db775a"></script>
+</body>
+</html>

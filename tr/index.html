@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html data-root="../" dir="ltr" lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pomodoro Sayacı ve Zamanlayıcı – Ders Çalışma İçin Ücretsiz | Tarkeez Pomodoro</title>
+  <meta name="description" content="Tarkeez Pomodoro: ders çalışmak ve iş için ücretsiz online Pomodoro sayacı (zamanlayıcı). Görev listesi ve istatistikler. Kayıt gerekmez, telefonda ve bilgisayarda çalışır.">
+  <link rel="canonical" href="https://tarkeezpomodoro.github.io/tr/">
+  <link rel="alternate" hreflang="ar" href="https://tarkeezpomodoro.github.io/ar/">
+  <link rel="alternate" hreflang="en" href="https://tarkeezpomodoro.github.io/en/">
+  <link rel="alternate" hreflang="tr" href="https://tarkeezpomodoro.github.io/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://tarkeezpomodoro.github.io/">
+  <meta name="theme-color" content="#ba4949">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta property="og:site_name" content="Tarkeez Pomodoro">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pomodoro Sayacı ve Zamanlayıcı – Ders Çalışma İçin Ücretsiz | Tarkeez Pomodoro">
+  <meta property="og:description" content="Tarkeez Pomodoro: ders çalışmak ve iş için ücretsiz online Pomodoro sayacı (zamanlayıcı). Görev listesi ve istatistikler. Kayıt gerekmez, telefonda ve bilgisayarda çalışır.">
+  <meta property="og:url" content="https://tarkeezpomodoro.github.io/tr/">
+  <meta property="og:image" content="https://tarkeezpomodoro.github.io/img/og-tr.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarkeez Pomodoro — ücretsiz Pomodoro sayacı">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="ar_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=84db775a">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Tarkeez Pomodoro", "alternateName": ["Tarkeez Pomodoro", "تركيز بومودورو", "Tarkeez", "تركيز"], "url": "https://tarkeezpomodoro.github.io/tr/", "description": "Tarkeez Pomodoro: ders çalışmak ve iş için ücretsiz online Pomodoro sayacı (zamanlayıcı). Görev listesi ve istatistikler. Kayıt gerekmez, telefonda ve bilgisayarda çalışır.", "applicationCategory": "ProductivityApplication", "operatingSystem": "Any", "inLanguage": "tr", "isAccessibleForFree": true, "image": "https://tarkeezpomodoro.github.io/img/og-tr.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Görevlerim ve verilerim kaydediliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, yalnızca tarayıcında (yerel depolama). Hiçbir sunucuya gönderilmez. Tarayıcı verilerini silersen bunlar da silinir."}}, {"@type": "Question", "name": "Başka sekmeye geçersem zamanlayıcı çalışmaya devam eder mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Zamanlayıcı arka planda da doğru çalışır ve kalan süreyi sekme başlığında gösterir. Uyarı almak için Ayarlar'dan bildirimleri aç."}}, {"@type": "Question", "name": "Ücretsiz mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, tamamen ücretsiz ve kayıt gerektirmez."}}]}</script>
+</head>
+<body data-mode="pomodoro">
+<a class="skip-link" data-i18n="skip" href="#timer">Zamanlayıcıya geç</a>
+<div aria-hidden="true" class="progress-top"><div class="progress-top__bar" id="topBar"></div></div>
+<header class="topbar">
+<div class="container topbar__inner">
+<a class="brand" href="./">
+<img alt="" height="28" src="../favicon.svg" width="28"/>
+<span data-i18n="brand">Tarkeez Pomodoro</span>
+</a>
+<nav class="topbar__actions">
+<button aria-haspopup="dialog" class="btn-ghost" id="statsBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>
+<span data-i18n="report">Rapor</span>
+</button>
+<button aria-haspopup="dialog" class="btn-ghost" id="settingsBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>
+<span data-i18n="settings">Ayarlar</span>
+</button>
+        <div class="lang-menu">
+          <button class="btn-ghost lang-menu__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Dil"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="lang-menu__cur">Türkçe</span></button>
+          <ul class="menu lang-menu__list" hidden>
+          <li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li>
+          <li><a href="../en/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr" aria-current="true">Türkçe</a></li>
+          </ul>
+        </div>
+      </nav>
+</div>
+</header>
+<main class="container main">
+<!-- TIMER -->
+<section aria-labelledby="timerHeading" class="timer-card" id="timer">
+<h1 class="tagline" data-i18n="h1" id="timerHeading">Ders ve iş için ücretsiz Pomodoro sayacı</h1>
+<div aria-label="Timer mode" class="modes" role="tablist">
+<button class="mode-btn" data-i18n="mode_pomodoro" data-mode="pomodoro" role="tab" type="button">Pomodoro</button>
+<button class="mode-btn" data-i18n="mode_short" data-mode="short" role="tab" type="button">Kısa Mola</button>
+<button class="mode-btn" data-i18n="mode_long" data-mode="long" role="tab" type="button">Uzun Mola</button>
+</div>
+<div aria-live="off" class="time" dir="ltr" id="time" role="timer">25:00</div>
+<div class="controls">
+<button class="btn-start" data-i18n="start" id="startBtn" type="button">BAŞLAT</button>
+<button aria-label="Oturumu atla" class="btn-icon" data-i18n-aria="skip_session" hidden="" id="skipBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 4l10 8-10 8V4zM19 5v14"></path></svg>
+</button>
+<button aria-label="Sıfırla" class="btn-icon" data-i18n-aria="reset" id="resetBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"></path></svg>
+</button>
+</div>
+<p class="kbd-hint" data-i18n="kbd_hint">Başlatmak veya duraklatmak için Boşluk tuşuna basın</p>
+</section>
+<div class="session-info">
+<div class="session-count" id="sessionCount">#1</div>
+<div class="session-msg" id="sessionMsg">حان وقت التركيز!</div>
+</div>
+<!-- TASKS -->
+<section aria-labelledby="tasksHeading" class="tasks">
+<div class="tasks__head">
+<h2 data-i18n="tasks" id="tasksHeading">Görevler</h2>
+<div class="menu-wrap">
+<button aria-expanded="false" aria-haspopup="menu" aria-label="Görev seçenekleri" class="btn-icon btn-icon--sm" data-i18n-aria="task_options" id="tasksMenuBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg>
+</button>
+<div class="menu" hidden="" id="tasksMenu" role="menu">
+<button data-action="clear-done" data-i18n="clear_done" role="menuitem" type="button">Biten görevleri temizle</button>
+<button data-action="clear-pomos" data-i18n="clear_pomos" role="menuitem" type="button">Pomodoro sayılarını sıfırla</button>
+<button data-action="clear-all" data-i18n="clear_all" role="menuitem" type="button">Tüm görevleri temizle</button>
+</div>
+</div>
+</div>
+<div class="current-task" hidden="" id="currentTask">
+<span data-i18n="working_on">Şu an üzerinde çalışılan:</span> <strong id="currentTaskName"></strong>
+</div>
+<ul class="task-list" id="taskList"></ul>
+<button class="add-task" id="addTaskBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+<span data-i18n="add_task">Görev Ekle</span>
+</button>
+<form autocomplete="off" class="task-form" hidden="" id="taskForm">
+<input data-i18n-ph="task_ph" id="taskTitle" maxlength="120" placeholder="Ne üzerinde çalışıyorsun?" required="" type="text"/>
+<label class="task-form__label" data-i18n="est_pomos" for="taskEst">Tahmini Pomodoro</label>
+<div class="stepper">
+<input id="taskEst" inputmode="numeric" max="99" min="1" type="number" value="1"/>
+<button aria-label="+1" class="stepper__btn" data-step="1" type="button">▲</button>
+<button aria-label="-1" class="stepper__btn" data-step="-1" type="button">▼</button>
+</div>
+<textarea data-i18n-ph="note_ph" id="taskNote" maxlength="500" placeholder="Not (isteğe bağlı)" rows="2"></textarea>
+<div class="task-form__actions">
+<button class="btn-text btn-danger" data-i18n="delete" hidden="" id="taskDeleteBtn" type="button">Sil</button>
+<span class="spacer"></span>
+<button class="btn-text" data-i18n="cancel" id="taskCancelBtn" type="button">İptal</button>
+<button class="btn-dark" data-i18n="save" type="submit">Kaydet</button>
+</div>
+</form>
+<div class="summary" hidden="" id="summary">
+<span><span data-i18n="pomos">Pomodoro</span>: <b id="sumPomos">0/0</b></span>
+<span><span data-i18n="finish_at">Bitiş saati</span>: <b dir="ltr" id="sumFinish">--:--</b> <small id="sumHours"></small></span>
+</div>
+</section>
+<!-- ABOUT / GUIDE -->
+<article class="guide" id="guide">
+<section>
+<h2 data-i18n="g_what_t">Pomodoro Tekniği nedir?</h2>
+<p data-i18n="g_what_p">Pomodoro Tekniği, Francesco Cirillo'nun 1980'lerin sonunda geliştirdiği basit bir zaman yönetimi yöntemidir. İşini kısa molalarla ayrılmış kısa odak aralıklarına (genellikle 25 dakika) bölersin. Her aralığa "pomodoro" denir; İtalyanca "domates" demektir ve adını Cirillo'nun öğrenciyken kullandığı domates şeklindeki mutfak zamanlayıcısından alır.</p>
+</section>
+<section>
+<h2 data-i18n="g_how_t">Nasıl kullanılır? (5 adım)</h2>
+<ol class="steps">
+<li data-i18n="g_how_1"><b>Tek bir görev seç</b></li>
+<li data-i18n="g_how_2"><b>Zamanlayıcıyı 25 dakikaya ayarla</b></li>
+<li data-i18n="g_how_3"><b>Zamanlayıcı çalana kadar yalnızca o görev üzerinde çalış.</b></li>
+<li data-i18n="g_how_4"><b>5 dakikalık kısa bir mola ver</b></li>
+<li data-i18n="g_how_5"><b>4 turdan sonra</b></li>
+</ol>
+</section>
+<section>
+<h2 data-i18n="g_why_t">Odaklanmakta zorlananlara neden iyi gelir?</h2>
+<ul class="cards">
+<li><h3 data-i18n="g_why_1t">Başlamayı kolaylaştırır</h3><p data-i18n="g_why_1p">Sadece 25 dakika, "saatlerce çalışmak" kadar göz korkutucu değildir; böylece erteleme azalır.</p></li>
+<li><h3 data-i18n="g_why_2t">Dikkat dağınıklığıyla savaşır</h3><p data-i18n="g_why_2p">Net bir bitiş noktası, beynin dikkat dağıtıcıları ertelemesine yardım eder.</p></li>
+<li><h3 data-i18n="g_why_3t">Tükenmişliği önler</h3><p data-i18n="g_why_3p">Düzenli molalar zihinsel enerjiyi tazeler ve gün boyu odağını keskin tutar.</p></li>
+<li><h3 data-i18n="g_why_4t">İlerlemeni gösterir</h3><p data-i18n="g_why_4p">Tamamlanan pomodoroları saymak başarı hissi verir ve devam etmeni sağlar.</p></li>
+</ul>
+</section>
+<section>
+<h2 data-i18n="g_tips_t">Daha iyi sonuçlar için ipuçları</h2>
+<ul class="tips">
+<li data-i18n="g_tip_1">Odak turu sırasında telefon bildirimlerini kapat ya da telefonu başka bir odaya bırak.</li>
+<li data-i18n="g_tip_2">Büyük görevleri her biri 1–4 tur sürecek küçük görevlere böl.</li>
+<li data-i18n="g_tip_3">25 dakika uzun geliyorsa Ayarlar'dan 15 dakikayla başla ve yavaş yavaş artır.</li>
+<li data-i18n="g_tip_4">Molada telefonda gezinme; hareket et ya da derin nefes al ki zihnin gerçekten dinlensin.</li>
+<li data-i18n="g_tip_5">Biri seni bölerse turu sonra bitir ya da yeniden başlat; bir pomodoro bölünmez.</li>
+</ul>
+</section>
+<section>
+<h2 data-i18n="g_faq_t">Sık sorulan sorular</h2>
+<details><summary data-i18n="faq1_q">Görevlerim ve verilerim kaydediliyor mu?</summary><p data-i18n="faq1_a">Evet, yalnızca tarayıcında (yerel depolama). Hiçbir sunucuya gönderilmez. Tarayıcı verilerini silersen bunlar da silinir.</p></details>
+<details><summary data-i18n="faq2_q">Başka sekmeye geçersem zamanlayıcı çalışmaya devam eder mi?</summary><p data-i18n="faq2_a">Evet. Zamanlayıcı arka planda da doğru çalışır ve kalan süreyi sekme başlığında gösterir. Uyarı almak için Ayarlar'dan bildirimleri aç.</p></details>
+<details><summary data-i18n="faq3_q">Ücretsiz mi?</summary><p data-i18n="faq3_a">Evet, tamamen ücretsiz ve kayıt gerektirmez.</p></details>
+</section>
+      <section class="guides"><h2>Faydalı rehberler</h2><ul class="cards cards--links"><li class="card"><a href="../tr/articles/pomodoro-for-studying/"><h3>Ders Çalışırken Pomodoro Tekniği: Öğrenciler İçin Pratik Rehber</h3><p>Pomodoro Tekniği ile daha odaklı nasıl ders çalışılır? Adım adım uygulama, örnek bir çalışma planı ve öğrencilerin sık yaptığı hatalar.</p><span class="card__more">Makaleyi oku →</span></a></li><li class="card"><a href="../tr/articles/beat-distraction/"><h3>Pomodoro Tekniğiyle Dikkat Dağınıklığını ve Odaklanma Sorununu Yenmek</h3><p>Dikkatin çabuk mu dağılıyor? Pomodoro Tekniği&#x27;nin dikkat dağıtıcılara direnmene ve ertelediğin işlere başlamana nasıl yardım ettiğini beş pratik stratejiyle öğren.</p><span class="card__more">Makaleyi oku →</span></a></li><li class="card"><a href="../tr/articles/yks-pomodoro-calisma-programi/"><h3>YKS İçin Pomodoro Çalışma Programı: TYT ve AYT&#x27;ye Odaklı Hazırlık</h3><p>YKS&#x27;ye hazırlanırken Pomodoro Tekniği nasıl kullanılır? TYT ve AYT için örnek günlük program, deneme günleri için öneriler ve sınav süresine dayanıklılık kazanma ipuçları.</p><span class="card__more">Makaleyi oku →</span></a></li></ul></section>
+    </article>
+</main>
+
+  <footer class="footer">
+    <div class="container container--wide">
+      <nav class="footer__nav" aria-label="Makaleler"><a href="../tr/"><b>Zamanlayıcı</b></a> <a href="../tr/articles/"><b>Makaleler</b></a> <a href="../tr/articles/pomodoro-for-studying/">Ders Çalışırken Pomodoro Tekniği: Öğrenciler İçin Pratik Rehber</a> <a href="../tr/articles/beat-distraction/">Pomodoro Tekniğiyle Dikkat Dağınıklığını ve Odaklanma Sorununu Yenmek</a> <a href="../tr/articles/yks-pomodoro-calisma-programi/">YKS İçin Pomodoro Çalışma Programı: TYT ve AYT&#x27;ye Odaklı Hazırlık</a></nav>
+      <nav class="footer__langs" aria-label="Dil"><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a> <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a> <a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></nav>
+      <nav class="footer__pages"><a href="../tr/about/">Hakkında</a> <a href="../tr/privacy/">Gizlilik Politikası</a></nav>
+      <p>Odaklanmana yardımcı olmak için özenle yapıldı</p>
+      <p class="footer__rights">© 2026 Muhammed FEHİMOĞLU · Tüm hakları saklıdır</p>
+    </div>
+  </footer>
+
+  <!-- SETTINGS DIALOG -->
+<dialog aria-labelledby="settingsTitle" class="modal" id="settingsDlg">
+<form class="modal__inner" id="settingsForm" method="dialog">
+<div class="modal__head">
+<h2 data-i18n="settings" id="settingsTitle">Ayarlar</h2>
+<button aria-label="Kapat" class="btn-icon btn-icon--sm btn-close" data-i18n-aria="close" value="cancel">✕</button>
+</div>
+<fieldset class="field-group">
+<legend data-i18n="time_minutes">Süre (dakika)</legend>
+<div class="grid3">
+<label><span data-i18n="mode_pomodoro">Pomodoro</span><input id="setPomo" max="180" min="1" type="number"/></label>
+<label><span data-i18n="mode_short">Kısa Mola</span><input id="setShort" max="60" min="1" type="number"/></label>
+<label><span data-i18n="mode_long">Uzun Mola</span><input id="setLong" max="120" min="1" type="number"/></label>
+</div>
+</fieldset>
+<div class="row"><label data-i18n="auto_breaks" for="setAutoBreak">Molaları otomatik başlat</label><input class="switch" id="setAutoBreak" type="checkbox"/></div>
+<div class="row"><label data-i18n="auto_pomos" for="setAutoPomo">Pomodoroları otomatik başlat</label><input class="switch" id="setAutoPomo" type="checkbox"/></div>
+<div class="row"><label data-i18n="long_interval" for="setInterval">Uzun mola aralığı (tur)</label><input class="num-sm" id="setInterval" max="12" min="1" type="number"/></div>
+<div class="row"><label data-i18n="alarm_sound" for="setSound">Alarm sesi</label>
+<select id="setSound">
+<option data-i18n="snd_bell" value="bell">Zil</option>
+<option data-i18n="snd_digital" value="digital">Dijital</option>
+<option data-i18n="snd_soft" value="soft">Yumuşak</option>
+<option data-i18n="snd_none" value="none">Sessiz</option>
+</select>
+</div>
+<div class="row"><label data-i18n="volume" for="setVolume">Ses düzeyi</label><input id="setVolume" max="100" min="0" type="range"/></div>
+<div class="row"><label data-i18n="ambient" for="setAmbient">Odaklanırken arka plan sesi</label>
+<select id="setAmbient"><option data-i18n="amb_none" value="none">Yok</option><option data-i18n="amb_rain" value="rain">Yağmur</option><option data-i18n="amb_white" value="white">Beyaz gürültü</option><option data-i18n="amb_brown" value="brown">Kahverengi gürültü (daha derin)</option></select>
+</div>
+<div class="row"><label data-i18n="ambient_vol" for="setAmbientVol">Arka plan ses düzeyi</label><input id="setAmbientVol" max="100" min="0" type="range"/></div>
+<div class="row"><label data-i18n="tick" for="setTick">Odaklanırken tik tak sesi</label><input class="switch" id="setTick" type="checkbox"/></div>
+<div class="row"><label data-i18n="notify" for="setNotify">Tarayıcı bildirimleri</label><input class="switch" id="setNotify" type="checkbox"/></div>
+<div class="row"><label data-i18n="dark_run" for="setDark">Çalışırken karanlık mod</label><input class="switch" id="setDark" type="checkbox"/></div>
+<div class="modal__foot">
+<button class="btn-text" data-i18n="test_sound" id="testSoundBtn" type="button">Sesi dene</button>
+<span class="spacer"></span>
+<button class="btn-dark" data-i18n="ok" id="saveSettingsBtn" type="button">Kaydet</button>
+</div>
+</form>
+</dialog>
+<!-- STATS DIALOG -->
+<dialog aria-labelledby="statsTitle" class="modal" id="statsDlg">
+<form class="modal__inner" method="dialog">
+<div class="modal__head">
+<h2 data-i18n="report" id="statsTitle">Rapor</h2>
+<button aria-label="Kapat" class="btn-icon btn-icon--sm btn-close" data-i18n-aria="close" value="cancel">✕</button>
+</div>
+<div class="stat-cards">
+<div class="stat"><b id="stToday">0</b><span data-i18n="st_today">Bugünkü pomodorolar</span></div>
+<div class="stat"><b id="stMinutes">0</b><span data-i18n="st_minutes">Bugünkü odak dakikası</span></div>
+<div class="stat"><b id="stStreak">0</b><span data-i18n="st_streak">Gün serisi</span></div>
+</div>
+<h3 class="chart-title" data-i18n="st_week">Son 7 gün (odak dakikası)</h3>
+<div class="chart" id="weekChart" role="img"></div>
+<div class="modal__foot">
+<button class="btn-text btn-danger" data-i18n="reset_stats" id="resetStatsBtn" type="button">İstatistikleri temizle</button>
+<span class="spacer"></span>
+<button class="btn-dark" data-i18n="close" value="cancel">Kapat</button>
+</div>
+</form>
+</dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="../i18n.js?v=84db775a"></script>
+<script src="../site.js?v=84db775a"></script>
+<script src="../app.js?v=84db775a"></script>
+</body>
+</html>

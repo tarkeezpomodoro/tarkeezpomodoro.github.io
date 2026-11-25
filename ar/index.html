@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html data-root="../" dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>مؤقت بومودورو للدراسة والتركيز مجانًا | تركيز بومودورو</title>
+  <meta name="description" content="تركيز بومودورو: مؤقت بومودورو (بومودورو تايمر) مجاني بالعربي للدراسة والعمل، مع قائمة مهام وإحصائيات. بدون تسجيل، ويعمل على الهاتف والكمبيوتر.">
+  <link rel="canonical" href="https://tarkeezpomodoro.github.io/ar/">
+  <link rel="alternate" hreflang="ar" href="https://tarkeezpomodoro.github.io/ar/">
+  <link rel="alternate" hreflang="en" href="https://tarkeezpomodoro.github.io/en/">
+  <link rel="alternate" hreflang="tr" href="https://tarkeezpomodoro.github.io/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://tarkeezpomodoro.github.io/">
+  <meta name="theme-color" content="#ba4949">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta property="og:site_name" content="تركيز بومودورو">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="مؤقت بومودورو للدراسة والتركيز مجانًا | تركيز بومودورو">
+  <meta property="og:description" content="تركيز بومودورو: مؤقت بومودورو (بومودورو تايمر) مجاني بالعربي للدراسة والعمل، مع قائمة مهام وإحصائيات. بدون تسجيل، ويعمل على الهاتف والكمبيوتر.">
+  <meta property="og:url" content="https://tarkeezpomodoro.github.io/ar/">
+  <meta property="og:image" content="https://tarkeezpomodoro.github.io/img/og-ar.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="تركيز بومودورو — مؤقت بومودورو مجاني للدراسة">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=84db775a">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "تركيز بومودورو", "alternateName": ["Tarkeez Pomodoro", "تركيز بومودورو", "Tarkeez", "تركيز"], "url": "https://tarkeezpomodoro.github.io/ar/", "description": "تركيز بومودورو: مؤقت بومودورو (بومودورو تايمر) مجاني بالعربي للدراسة والعمل، مع قائمة مهام وإحصائيات. بدون تسجيل، ويعمل على الهاتف والكمبيوتر.", "applicationCategory": "ProductivityApplication", "operatingSystem": "Any", "inLanguage": "ar", "isAccessibleForFree": true, "image": "https://tarkeezpomodoro.github.io/img/og-ar.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ar", "mainEntity": [{"@type": "Question", "name": "هل تُحفظ مهامي وبياناتي؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، تُحفظ في متصفحك فقط (التخزين المحلي) ولا تُرسل إلى أي خادم. إن مسحت بيانات المتصفح ستُحذف."}}, {"@type": "Question", "name": "هل يعمل المؤقت إذا انتقلت إلى تبويب آخر؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. يحسب المؤقت الوقت بدقة حتى في الخلفية، ويظهر الوقت المتبقي في عنوان التبويب. فعّل الإشعارات من الإعدادات لتصلك تنبيهات."}}, {"@type": "Question", "name": "هل الموقع مجاني؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، مجاني بالكامل ولا يحتاج إلى تسجيل."}}]}</script>
+</head>
+<body data-mode="pomodoro">
+<a class="skip-link" data-i18n="skip" href="#timer">تخطَّ إلى المؤقت</a>
+<div aria-hidden="true" class="progress-top"><div class="progress-top__bar" id="topBar"></div></div>
+<header class="topbar">
+<div class="container topbar__inner">
+<a class="brand" href="./">
+<img alt="" height="28" src="../favicon.svg" width="28"/>
+<span data-i18n="brand">تركيز بومودورو</span>
+</a>
+<nav class="topbar__actions">
+<button aria-haspopup="dialog" class="btn-ghost" id="statsBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>
+<span data-i18n="report">التقرير</span>
+</button>
+<button aria-haspopup="dialog" class="btn-ghost" id="settingsBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>
+<span data-i18n="settings">الإعدادات</span>
+</button>
+        <div class="lang-menu">
+          <button class="btn-ghost lang-menu__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="اللغة"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="lang-menu__cur">العربية</span></button>
+          <ul class="menu lang-menu__list" hidden>
+          <li><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar" aria-current="true">العربية</a></li>
+          <li><a href="../en/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          </ul>
+        </div>
+      </nav>
+</div>
+</header>
+<main class="container main">
+<!-- TIMER -->
+<section aria-labelledby="timerHeading" class="timer-card" id="timer">
+<h1 class="tagline" data-i18n="h1" id="timerHeading">مؤقت بومودورو مجاني للدراسة والعمل</h1>
+<div aria-label="Timer mode" class="modes" role="tablist">
+<button class="mode-btn" data-i18n="mode_pomodoro" data-mode="pomodoro" role="tab" type="button">بومودورو</button>
+<button class="mode-btn" data-i18n="mode_short" data-mode="short" role="tab" type="button">استراحة قصيرة</button>
+<button class="mode-btn" data-i18n="mode_long" data-mode="long" role="tab" type="button">استراحة طويلة</button>
+</div>
+<div aria-live="off" class="time" dir="ltr" id="time" role="timer">25:00</div>
+<div class="controls">
+<button class="btn-start" data-i18n="start" id="startBtn" type="button">ابدأ</button>
+<button aria-label="تخطَّ الجلسة" class="btn-icon" data-i18n-aria="skip_session" hidden="" id="skipBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 4l10 8-10 8V4zM19 5v14"></path></svg>
+</button>
+<button aria-label="إعادة ضبط" class="btn-icon" data-i18n-aria="reset" id="resetBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"></path></svg>
+</button>
+</div>
+<p class="kbd-hint" data-i18n="kbd_hint">اضغط مفتاح المسافة للبدء أو الإيقاف المؤقت</p>
+</section>
+<div class="session-info">
+<div class="session-count" id="sessionCount">#1</div>
+<div class="session-msg" id="sessionMsg">حان وقت التركيز!</div>
+</div>
+<!-- TASKS -->
+<section aria-labelledby="tasksHeading" class="tasks">
+<div class="tasks__head">
+<h2 data-i18n="tasks" id="tasksHeading">المهام</h2>
+<div class="menu-wrap">
+<button aria-expanded="false" aria-haspopup="menu" aria-label="خيارات المهام" class="btn-icon btn-icon--sm" data-i18n-aria="task_options" id="tasksMenuBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg>
+</button>
+<div class="menu" hidden="" id="tasksMenu" role="menu">
+<button data-action="clear-done" data-i18n="clear_done" role="menuitem" type="button">حذف المهام المنجزة</button>
+<button data-action="clear-pomos" data-i18n="clear_pomos" role="menuitem" type="button">تصفير عدّاد البومودورو</button>
+<button data-action="clear-all" data-i18n="clear_all" role="menuitem" type="button">حذف كل المهام</button>
+</div>
+</div>
+</div>
+<div class="current-task" hidden="" id="currentTask">
+<span data-i18n="working_on">تعمل الآن على:</span> <strong id="currentTaskName"></strong>
+</div>
+<ul class="task-list" id="taskList"></ul>
+<button class="add-task" id="addTaskBtn" type="button">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+<span data-i18n="add_task">إضافة مهمة</span>
+</button>
+<form autocomplete="off" class="task-form" hidden="" id="taskForm">
+<input data-i18n-ph="task_ph" id="taskTitle" maxlength="120" placeholder="ما الذي تعمل عليه؟" required="" type="text"/>
+<label class="task-form__label" data-i18n="est_pomos" for="taskEst">عدد البومودورو المتوقع</label>
+<div class="stepper">
+<input id="taskEst" inputmode="numeric" max="99" min="1" type="number" value="1"/>
+<button aria-label="+1" class="stepper__btn" data-step="1" type="button">▲</button>
+<button aria-label="-1" class="stepper__btn" data-step="-1" type="button">▼</button>
+</div>
+<textarea data-i18n-ph="note_ph" id="taskNote" maxlength="500" placeholder="ملاحظة (اختياري)" rows="2"></textarea>
+<div class="task-form__actions">
+<button class="btn-text btn-danger" data-i18n="delete" hidden="" id="taskDeleteBtn" type="button">حذف</button>
+<span class="spacer"></span>
+<button class="btn-text" data-i18n="cancel" id="taskCancelBtn" type="button">إلغاء</button>
+<button class="btn-dark" data-i18n="save" type="submit">حفظ</button>
+</div>
+</form>
+<div class="summary" hidden="" id="summary">
+<span><span data-i18n="pomos">بومودورو</span>: <b id="sumPomos">0/0</b></span>
+<span><span data-i18n="finish_at">وقت الانتهاء المتوقع</span>: <b dir="ltr" id="sumFinish">--:--</b> <small id="sumHours"></small></span>
+</div>
+</section>
+<!-- ABOUT / GUIDE -->
+<article class="guide" id="guide">
+<section>
+<h2 data-i18n="g_what_t">ما هي تقنية بومودورو؟</h2>
+<p data-i18n="g_what_p">تقنية بومودورو طريقة بسيطة لإدارة الوقت ابتكرها فرانشيسكو سيريلو في أواخر الثمانينيات. الفكرة: تقسّم عملك إلى فترات تركيز قصيرة (عادةً 25 دقيقة) تفصل بينها استراحات قصيرة. كل فترة تركيز تُسمّى «بومودورو»، وهي كلمة إيطالية تعني «طماطم»، نسبةً إلى مؤقت المطبخ الذي كان على شكل طماطم واستخدمه سيريلو أيام دراسته.</p>
+</section>
+<section>
+<h2 data-i18n="g_how_t">كيف تستخدمها؟ (5 خطوات)</h2>
+<ol class="steps">
+<li data-i18n="g_how_1"><b>اختر مهمة واحدة</b></li>
+<li data-i18n="g_how_2"><b>اضبط المؤقت على 25 دقيقة</b></li>
+<li data-i18n="g_how_3"><b>اعمل على المهمة فقط</b></li>
+<li data-i18n="g_how_4"><b>خذ استراحة قصيرة</b></li>
+<li data-i18n="g_how_5"><b>بعد 4 جولات</b></li>
+</ol>
+</section>
+<section>
+<h2 data-i18n="g_why_t">لماذا تنجح مع من يعانون من صعوبة التركيز؟</h2>
+<ul class="cards">
+<li><h3 data-i18n="g_why_1t">تجعل البداية سهلة</h3><p data-i18n="g_why_1p">25 دقيقة فقط تبدو أقل رهبة من «ساعات من العمل»، فيقلّ التسويف.</p></li>
+<li><h3 data-i18n="g_why_2t">تحارب التشتت</h3><p data-i18n="g_why_2p">وجود نهاية واضحة يساعد العقل على تأجيل المشتتات بدل الاستسلام لها.</p></li>
+<li><h3 data-i18n="g_why_3t">تمنع الإرهاق</h3><p data-i18n="g_why_3p">الاستراحات المنتظمة تجدد الطاقة الذهنية وتحافظ على جودة التركيز طوال اليوم.</p></li>
+<li><h3 data-i18n="g_why_4t">تُظهر تقدّمك</h3><p data-i18n="g_why_4p">عدّ جولات البومودورو المنجزة يمنحك إحساسًا بالإنجاز ويحفّزك للاستمرار.</p></li>
+</ul>
+</section>
+<section>
+<h2 data-i18n="g_tips_t">نصائح لنتائج أفضل</h2>
+<ul class="tips">
+<li data-i18n="g_tip_1">أغلق إشعارات الهاتف أو ضعه في غرفة أخرى أثناء جولة التركيز.</li>
+<li data-i18n="g_tip_2">قسّم المهام الكبيرة إلى مهام صغيرة تحتاج كل منها إلى 1–4 جولات.</li>
+<li data-i18n="g_tip_3">إن كانت 25 دقيقة طويلة عليك، ابدأ بـ 15 دقيقة من الإعدادات وزِدها تدريجيًا.</li>
+<li data-i18n="g_tip_4">لا تتصفح الهاتف في الاستراحة؛ تحرّك أو تنفّس بعمق لتريح عقلك فعلًا.</li>
+<li data-i18n="g_tip_5">إذا قاطعك أحد، أنهِ الجولة لاحقًا أو أعد تشغيلها؛ الجولة لا تُقسَّم.</li>
+</ul>
+</section>
+<section>
+<h2 data-i18n="g_faq_t">أسئلة شائعة</h2>
+<details><summary data-i18n="faq1_q">هل تُحفظ مهامي وبياناتي؟</summary><p data-i18n="faq1_a">نعم، تُحفظ في متصفحك فقط (التخزين المحلي) ولا تُرسل إلى أي خادم. إن مسحت بيانات المتصفح ستُحذف.</p></details>
+<details><summary data-i18n="faq2_q">هل يعمل المؤقت إذا انتقلت إلى تبويب آخر؟</summary><p data-i18n="faq2_a">نعم. يحسب المؤقت الوقت بدقة حتى في الخلفية، ويظهر الوقت المتبقي في عنوان التبويب. فعّل الإشعارات من الإعدادات لتصلك تنبيهات.</p></details>
+<details><summary data-i18n="faq3_q">هل الموقع مجاني؟</summary><p data-i18n="faq3_a">نعم، مجاني بالكامل ولا يحتاج إلى تسجيل.</p></details>
+</section>
+      <section class="guides"><h2>أدلة مفيدة</h2><ul class="cards cards--links"><li class="card"><a href="../ar/articles/pomodoro-for-studying/"><h3>تقنية بومودورو للمذاكرة: دليل عملي للطلاب</h3><p>كيف تذاكر بتركيز أعلى باستخدام تقنية بومودورو؟ خطوات عملية، وجدول مقترح لجلسة مذاكرة، وأخطاء شائعة يقع فيها الطلاب.</p><span class="card__more">اقرأ المقال ←</span></a></li><li class="card"><a href="../ar/articles/beat-distraction/"><h3>كيف تتغلب على التشتت وضعف التركيز بتقنية بومودورو</h3><p>تشعر أن انتباهك يتشتت بسرعة؟ تعرّف كيف تساعدك تقنية بومودورو على مقاومة المشتتات والبدء في المهام المؤجلة، مع خمس استراتيجيات عملية.</p><span class="card__more">اقرأ المقال ←</span></a></li><li class="card"><a href="../ar/articles/high-school-exam-study-plan/"><h3>جدول مذاكرة للثانوية العامة بتقنية بومودورو</h3><p>كيف تنظم مذاكرتك للثانوية العامة أو التوجيهي أو البكالوريا بتقنية بومودورو؟ جدول يومي مقترح، وخطة للمراجعة النهائية، ونصائح للحفاظ على التركيز حتى يوم الامتحان.</p><span class="card__more">اقرأ المقال ←</span></a></li></ul></section>
+    </article>
+</main>
+
+  <footer class="footer">
+    <div class="container container--wide">
+      <nav class="footer__nav" aria-label="مقالات"><a href="../ar/"><b>المؤقت</b></a> <a href="../ar/articles/"><b>مقالات</b></a> <a href="../ar/articles/pomodoro-for-studying/">تقنية بومودورو للمذاكرة: دليل عملي للطلاب</a> <a href="../ar/articles/beat-distraction/">كيف تتغلب على التشتت وضعف التركيز بتقنية بومودورو</a> <a href="../ar/articles/high-school-exam-study-plan/">جدول مذاكرة للثانوية العامة بتقنية بومودورو</a></nav>
+      <nav class="footer__langs" aria-label="اللغة"><a href="../ar/" hreflang="ar" lang="ar" data-lang="ar">العربية</a> <a href="../en/" hreflang="en" lang="en" data-lang="en">English</a> <a href="../tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></nav>
+      <nav class="footer__pages"><a href="../ar/about/">من نحن</a> <a href="../ar/privacy/">سياسة الخصوصية</a></nav>
+      <p>صُنع بعناية لمساعدتك على التركيز</p>
+      <p class="footer__rights">© 2026 Muhammed FEHİMOĞLU · جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <!-- SETTINGS DIALOG -->
+<dialog aria-labelledby="settingsTitle" class="modal" id="settingsDlg">
+<form class="modal__inner" id="settingsForm" method="dialog">
+<div class="modal__head">
+<h2 data-i18n="settings" id="settingsTitle">الإعدادات</h2>
+<button aria-label="إغلاق" class="btn-icon btn-icon--sm btn-close" data-i18n-aria="close" value="cancel">✕</button>
+</div>
+<fieldset class="field-group">
+<legend data-i18n="time_minutes">الوقت (بالدقائق)</legend>
+<div class="grid3">
+<label><span data-i18n="mode_pomodoro">بومودورو</span><input id="setPomo" max="180" min="1" type="number"/></label>
+<label><span data-i18n="mode_short">استراحة قصيرة</span><input id="setShort" max="60" min="1" type="number"/></label>
+<label><span data-i18n="mode_long">استراحة طويلة</span><input id="setLong" max="120" min="1" type="number"/></label>
+</div>
+</fieldset>
+<div class="row"><label data-i18n="auto_breaks" for="setAutoBreak">بدء الاستراحات تلقائيًا</label><input class="switch" id="setAutoBreak" type="checkbox"/></div>
+<div class="row"><label data-i18n="auto_pomos" for="setAutoPomo">بدء جولات البومودورو تلقائيًا</label><input class="switch" id="setAutoPomo" type="checkbox"/></div>
+<div class="row"><label data-i18n="long_interval" for="setInterval">الاستراحة الطويلة بعد كل (جولات)</label><input class="num-sm" id="setInterval" max="12" min="1" type="number"/></div>
+<div class="row"><label data-i18n="alarm_sound" for="setSound">صوت التنبيه</label>
+<select id="setSound">
+<option data-i18n="snd_bell" value="bell">جرس</option>
+<option data-i18n="snd_digital" value="digital">رقمي</option>
+<option data-i18n="snd_soft" value="soft">هادئ</option>
+<option data-i18n="snd_none" value="none">بدون صوت</option>
+</select>
+</div>
+<div class="row"><label data-i18n="volume" for="setVolume">مستوى الصوت</label><input id="setVolume" max="100" min="0" type="range"/></div>
+<div class="row"><label data-i18n="ambient" for="setAmbient">صوت خلفي أثناء التركيز</label>
+<select id="setAmbient"><option data-i18n="amb_none" value="none">بدون</option><option data-i18n="amb_rain" value="rain">مطر</option><option data-i18n="amb_white" value="white">ضوضاء بيضاء</option><option data-i18n="amb_brown" value="brown">ضوضاء بنية (أهدأ)</option></select>
+</div>
+<div class="row"><label data-i18n="ambient_vol" for="setAmbientVol">مستوى الصوت الخلفي</label><input id="setAmbientVol" max="100" min="0" type="range"/></div>
+<div class="row"><label data-i18n="tick" for="setTick">صوت تكتكة أثناء التركيز</label><input class="switch" id="setTick" type="checkbox"/></div>
+<div class="row"><label data-i18n="notify" for="setNotify">إشعارات المتصفح</label><input class="switch" id="setNotify" type="checkbox"/></div>
+<div class="row"><label data-i18n="dark_run" for="setDark">الوضع الداكن أثناء التشغيل</label><input class="switch" id="setDark" type="checkbox"/></div>
+<div class="modal__foot">
+<button class="btn-text" data-i18n="test_sound" id="testSoundBtn" type="button">تجربة الصوت</button>
+<span class="spacer"></span>
+<button class="btn-dark" data-i18n="ok" id="saveSettingsBtn" type="button">حفظ</button>
+</div>
+</form>
+</dialog>
+<!-- STATS DIALOG -->
+<dialog aria-labelledby="statsTitle" class="modal" id="statsDlg">
+<form class="modal__inner" method="dialog">
+<div class="modal__head">
+<h2 data-i18n="report" id="statsTitle">التقرير</h2>
+<button aria-label="إغلاق" class="btn-icon btn-icon--sm btn-close" data-i18n-aria="close" value="cancel">✕</button>
+</div>
+<div class="stat-cards">
+<div class="stat"><b id="stToday">0</b><span data-i18n="st_today">جولات اليوم</span></div>
+<div class="stat"><b id="stMinutes">0</b><span data-i18n="st_minutes">دقائق تركيز اليوم</span></div>
+<div class="stat"><b id="stStreak">0</b><span data-i18n="st_streak">أيام متتالية</span></div>
+</div>
+<h3 class="chart-title" data-i18n="st_week">آخر 7 أيام (دقائق تركيز)</h3>
+<div class="chart" id="weekChart" role="img"></div>
+<div class="modal__foot">
+<button class="btn-text btn-danger" data-i18n="reset_stats" id="resetStatsBtn" type="button">مسح الإحصائيات</button>
+<span class="spacer"></span>
+<button class="btn-dark" data-i18n="close" value="cancel">إغلاق</button>
+</div>
+</form>
+</dialog>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="../i18n.js?v=84db775a"></script>
+<script src="../site.js?v=84db775a"></script>
+<script src="../app.js?v=84db775a"></script>
+</body>
+</html>

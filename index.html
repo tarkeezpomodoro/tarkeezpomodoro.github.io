@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tarkeez Pomodoro | تركيز بومودورو — Pomodoro Timer · مؤقت بومودورو · Pomodoro Sayacı</title>
+  <meta name="description" content="Free Pomodoro timer for studying in Arabic, English and Turkish. مؤقت بومودورو مجاني للدراسة بالعربي. Ücretsiz Pomodoro sayacı ve zamanlayıcı.">
+  <link rel="canonical" href="https://tarkeezpomodoro.github.io/">
+  <link rel="alternate" hreflang="ar" href="https://tarkeezpomodoro.github.io/ar/">
+  <link rel="alternate" hreflang="en" href="https://tarkeezpomodoro.github.io/en/">
+  <link rel="alternate" hreflang="tr" href="https://tarkeezpomodoro.github.io/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://tarkeezpomodoro.github.io/">
+  <meta name="theme-color" content="#ba4949">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta property="og:site_name" content="Tarkeez Pomodoro">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tarkeez Pomodoro | تركيز بومودورو — Pomodoro Timer · مؤقت بومودورو · Pomodoro Sayacı">
+  <meta property="og:description" content="Free Pomodoro timer for studying in Arabic, English and Turkish. مؤقت بومودورو مجاني للدراسة بالعربي. Ücretsiz Pomodoro sayacı ve zamanlayıcı.">
+  <meta property="og:url" content="https://tarkeezpomodoro.github.io/">
+  <meta property="og:image" content="https://tarkeezpomodoro.github.io/img/og-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarkeez Pomodoro — free Pomodoro timer for studying">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AR">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=84db775a">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Tarkeez Pomodoro", "alternateName": ["تركيز بومودورو", "Tarkeez"], "url": "https://tarkeezpomodoro.github.io/", "inLanguage": ["ar", "en", "tr"]}</script>
+  <script>
+    (function () {
+      var codes = ["ar", "en", "tr"], pick = null;
+      try { pick = JSON.parse(localStorage.getItem("tarkeez.lang")); } catch (e) {}
+      if (codes.indexOf(pick) < 0) {
+        pick = null;
+        var prefs = navigator.languages || [navigator.language || ""];
+        for (var i = 0; i < prefs.length && !pick; i++) {
+          var c = String(prefs[i]).toLowerCase().split("-")[0];
+          if (codes.indexOf(c) >= 0) pick = c;
+        }
+      }
+      location.replace((pick || "en") + "/" + location.hash);
+    })();
+  </script>
+</head>
+<body data-mode="pomodoro" class="page-choose">
+  <main class="choose">
+    <img src="favicon.svg" alt="" width="64" height="64">
+    <h1>Tarkeez Pomodoro · تركيز بومودورو</h1>
+    <nav class="choose__list" aria-label="Language">
+      <a class="choose__item" href="ar/" hreflang="ar" lang="ar" dir="rtl" data-lang="ar"><b>العربية</b><span>مؤقت بومودورو مجاني للدراسة والعمل</span></a>
+      <a class="choose__item" href="en/" hreflang="en" lang="en" dir="ltr" data-lang="en"><b>English</b><span>Free Pomodoro timer for studying and work</span></a>
+      <a class="choose__item" href="tr/" hreflang="tr" lang="tr" dir="ltr" data-lang="tr"><b>Türkçe</b><span>Ders ve iş için ücretsiz Pomodoro sayacı</span></a>
+    </nav>
+  </main>
+  <script src="site.js?v=84db775a"></script>
+</body>
+</html>
